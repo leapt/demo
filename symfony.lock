@@ -80,9 +80,6 @@
     "fakerphp/faker": {
         "version": "v1.19.0"
     },
-    "friendsofphp/proxy-manager-lts": {
-        "version": "v1.0.7"
-    },
     "guzzlehttp/guzzle": {
         "version": "7.4.2"
     },
@@ -91,9 +88,6 @@
     },
     "guzzlehttp/psr7": {
         "version": "2.2.1"
-    },
-    "laminas/laminas-code": {
-        "version": "4.5.1"
     },
     "league/flysystem": {
         "version": "3.0.12"
@@ -324,9 +318,6 @@
     },
     "symfony/property-info": {
         "version": "v6.0.3"
-    },
-    "symfony/proxy-manager-bridge": {
-        "version": "v6.0.6"
     },
     "symfony/routing": {
         "version": "6.2",
