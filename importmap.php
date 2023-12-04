@@ -24,4 +24,7 @@ return [
     '@symfony/stimulus-bundle' => [
         'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
     ],
+    'slugify' => [
+        'version' => '1.6.6',
+    ],
 ];

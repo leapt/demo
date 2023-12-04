@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+{% set active_section = 'slug' %}
+
+{% block body %}
+    <h1>Slug Type</h1>
+
+    {{ form(form) }}
+
+    <hr>
+
+    <p>Requires <a href="https://github.com/leapt/slug-type-bundle">leapt/slug-type-bundle</a>.</p>
+{% endblock body %}
+
+{% block footer %}
+    <hr>
+
+    Style:
+    {% set links = { 'Default': 'index', 'Bootstrap 4': 'bootstrap_4', 'Bootstrap 5': 'bootstrap_5' } %}
+    {% for label, link in links %}
+        {% if is_active_path(path("app_slug_#{link}")) %}<strong>{% endif %}
+        <a href="{{ path("app_slug_#{link}") }}">{{ label }}</a>
+        {% if is_active_path(path("app_slug_#{link}")) %}</strong>{% endif %}
+        {% if not loop.last %} - {% endif %}
+    {% endfor %}
+
+    {{ parent() }}
+{% endblock footer %}

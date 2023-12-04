@@ -62,6 +62,10 @@
                     {% if active_section == 'paginator' %}<strong>{% endif %}
                     <a href="{{ path('app_paginator_index') }}">Paginator</a>
                     {% if active_section == 'paginator' %}</strong>{% endif %}
+                    -
+                    {% if active_section == 'slug' %}<strong>{% endif %}
+                    <a href="{{ path('app_slug_index') }}">Slug Type</a>
+                    {% if active_section == 'slug' %}</strong>{% endif %}
                 </footer>
             {% endblock footer %}
         </div>

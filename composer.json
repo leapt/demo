@@ -13,6 +13,7 @@
         "league/flysystem-aws-s3-v3": "^3.22.0",
         "league/flysystem-bundle": "^3.3.2",
         "leapt/core-bundle": "^4.11.0",
+        "leapt/slug-type-bundle": "^1.2",
         "symfony/asset": "6.4.*",
         "symfony/asset-mapper": "6.4.*",
         "symfony/console": "6.4.*",

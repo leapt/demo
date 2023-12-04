@@ -126,6 +126,9 @@
             "config/packages/leapt_core.yaml"
         ]
     },
+    "leapt/slug-type-bundle": {
+        "version": "v1.2.0"
+    },
     "monolog/monolog": {
         "version": "2.4.0"
     },
