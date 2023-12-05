@@ -1,6 +1,6 @@
 leapt_core_feed:
-    resource: '@LeaptCoreBundle/Resources/config/routing_feed.yml'
+    resource: '@LeaptCoreBundle/config/routing_feed.php'
     prefix: /feed
 
 leapt_core_sitemap:
-    resource: '@LeaptCoreBundle/Resources/config/routing_sitemap.yml'
+    resource: '@LeaptCoreBundle/config/routing_sitemap.php'
