@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+{% set active_section = 'froala_editor' %}
+
+{% block body %}
+    <h1>Froala Editor Type</h1>
+
+    {{ form(form) }}
+
+    <hr>
+
+    <p>Requires <a href="https://github.com/leapt/froala-editor-bundle">leapt/froala-editor-bundle</a>.</p>
+{% endblock body %}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c0bfb7f42a5bf3e52f00be5afa37b87",
+    "content-hash": "94737f9aee95ed647148d8d4fb03f3fc",
     "packages": [
         {
             "name": "async-aws/core",
@@ -2491,6 +2491,77 @@
                 "source": "https://github.com/leapt/core-bundle/tree/v5.0.0"
             },
             "time": "2023-12-05T09:08:45+00:00"
+        },
+        {
+            "name": "leapt/froala-editor-bundle",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leapt/froala-editor-bundle.git",
+                "reference": "d59e86d7b64f4a8843357578a7b92dd8bb32800d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leapt/froala-editor-bundle/zipball/d59e86d7b64f4a8843357578a7b92dd8bb32800d",
+                "reference": "d59e86d7b64f4a8843357578a7b92dd8bb32800d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-zip": "*",
+                "php": "^8.2",
+                "symfony/asset": "^6.4 || ^7.0",
+                "symfony/console": "^6.4 || ^7.0",
+                "symfony/form": "^6.4 || ^7.0",
+                "symfony/framework-bundle": "^6.4 || ^7.0",
+                "symfony/http-client": "^6.4 || ^7.0",
+                "symfony/string": "^6.4 || ^7.0",
+                "symfony/twig-bundle": "^6.4 || ^7.0",
+                "twig/twig": "^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.49.0",
+                "phpstan/phpstan": "^1.10.57",
+                "phpstan/phpstan-deprecation-rules": "^1.1.4",
+                "phpunit/phpunit": "^9.6.16",
+                "symfony/css-selector": "^6.4 || ^7.0",
+                "symfony/dom-crawler": "^6.4 || ^7.0",
+                "symfony/yaml": "^6.4 || ^7.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Leapt\\FroalaEditorBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Simon Guionniere",
+                    "email": "simon.guionniere@gmail.com"
+                },
+                {
+                    "name": "Stefan Neculai",
+                    "email": "stefan.neculai@gmail.com"
+                },
+                {
+                    "name": "Jonathan Scheiber",
+                    "homepage": "https://github.com/jmsche"
+                }
+            ],
+            "description": "Provides a Froala editor integration for Symfony 6 & 7.",
+            "keywords": [
+                "editor",
+                "froala",
+                "wysiwyg"
+            ],
+            "support": {
+                "issues": "https://github.com/leapt/froala-editor-bundle/issues",
+                "source": "https://github.com/leapt/froala-editor-bundle/tree/v1.5.0"
+            },
+            "time": "2024-02-06T12:30:10+00:00"
         },
         {
             "name": "leapt/slug-type-bundle",
