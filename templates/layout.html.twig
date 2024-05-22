@@ -29,7 +29,7 @@
             {% endif %}
         {% endblock %}
 
-        {{ importmap() }}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
     </head>
     <body>
         <div class="container">
