@@ -8,7 +8,7 @@ use Leapt\CoreBundle\Paginator\ArrayPaginator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/paginator', name: 'app_paginator_')]
 final class PaginatorController extends AbstractController

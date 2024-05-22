@@ -12,14 +12,14 @@ use Leapt\CoreBundle\Datalist\Datasource\DoctrineORMDatasource;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/datalist', name: 'app_datalist_')]
 final class DatalistController extends AbstractController
 {
     public function __construct(
-        private DatalistFactory $datalistFactory,
-        private NewsRepository $newsRepository,
+        private readonly DatalistFactory $datalistFactory,
+        private readonly NewsRepository $newsRepository,
     ) {
     }
 

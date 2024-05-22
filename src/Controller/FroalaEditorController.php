@@ -7,7 +7,7 @@ namespace App\Controller;
 use Leapt\FroalaEditorBundle\Form\Type\FroalaEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/froala-editor', name: 'app_froala_editor_')]
 final class FroalaEditorController extends AbstractController

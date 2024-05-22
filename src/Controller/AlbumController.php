@@ -13,7 +13,7 @@ use Leapt\CoreBundle\Datalist\Datasource\DoctrineORMDatasource;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/album', name: 'app_album_')]
 final class AlbumController extends AbstractController
