@@ -15,9 +15,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/news', name: 'app_news_')]
 final class NewsController extends AbstractController
 {
-    public function __construct(private readonly NewsRepository $newsRepository)
-    {
-    }
+    public function __construct(private readonly NewsRepository $newsRepository) {}
 
     #[Route('/{slug}', name: 'view')]
     public function view(News $news): Response

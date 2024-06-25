@@ -27,3 +27,13 @@ tasks:
         desc: Stop Symfony server
         cmds:
             - symfony server:stop
+
+    lint:
+        desc: Check code style, static analysis...
+        cmds:
+            - symfony php vendor/bin/ecs
+
+    cs-fix:
+        desc: Fix code style
+        cmds:
+            - symfony php vendor/bin/ecs --fix

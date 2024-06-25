@@ -19,7 +19,7 @@ final class FroalaEditorController extends AbstractController
             ->add('content', FroalaEditorType::class)
             ->add('content2', FroalaEditorType::class, [
                 'label' => 'With some profile defined in config',
-                'froala_profile' => 'basic'
+                'froala_profile' => 'basic',
             ])
             ->getForm();
 

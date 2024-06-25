@@ -17,8 +17,7 @@ final class GalleryController extends AbstractController
 {
     public function __construct(
         private readonly GalleryRepository $galleryRepository,
-    ) {
-    }
+    ) {}
 
     #[Route('', name: 'index', methods: ['GET'])]
     public function index(): Response

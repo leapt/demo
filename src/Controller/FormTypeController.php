@@ -14,9 +14,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/form-types', name: 'app_form_type_')]
 final class FormTypeController extends AbstractController
 {
-    public function __construct(private readonly MediaRepository $mediaRepository)
-    {
-    }
+    public function __construct(private readonly MediaRepository $mediaRepository) {}
 
     #[Route('', name: 'index')]
     public function index(Request $request): Response

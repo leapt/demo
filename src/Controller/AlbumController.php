@@ -21,8 +21,7 @@ final class AlbumController extends AbstractController
     public function __construct(
         private readonly AlbumRepository $albumRepository,
         private readonly DatalistFactory $datalistFactory,
-    ) {
-    }
+    ) {}
 
     #[Route('', name: 'index')]
     public function index(Request $request): Response

@@ -15,8 +15,7 @@ final class NewsFeed implements FeedInterface
     public function __construct(
         private NewsRepository $newsRepository,
         private RouterInterface $router,
-    ) {
-    }
+    ) {}
 
     public function getId(): string
     {

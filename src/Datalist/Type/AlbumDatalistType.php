@@ -33,7 +33,7 @@ final class AlbumDatalistType extends DatalistType
             ])
             ->addField('photos', TextFieldType::class, [
                 'label'    => 'Photos',
-                'callback' => fn (Album $album): int => $album->getPhotos()->count(),
+                'callback' => fn(Album $album): int => $album->getPhotos()->count(),
             ])
             ->addAction('update', SimpleActionType::class, [
                 'route'  => 'app_album_update',

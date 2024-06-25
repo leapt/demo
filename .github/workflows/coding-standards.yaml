@@ -1,0 +1,33 @@
+name: Coding Standards
+
+on:
+  pull_request:
+    branches: ['main']
+  push:
+    branches: ['main']
+
+jobs:
+  ecs:
+    name: ECS (PHP ${{ matrix.php-version }})
+    runs-on: ubuntu-22.04
+
+    strategy:
+      matrix:
+        php-version:
+          - '8.3'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          php-version: ${{ matrix.php-version }}
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v3
+
+      - name: Run ECS
+        run: vendor/bin/ecs

@@ -20,8 +20,7 @@ final class DatalistController extends AbstractController
     public function __construct(
         private readonly DatalistFactory $datalistFactory,
         private readonly NewsRepository $newsRepository,
-    ) {
-    }
+    ) {}
 
     #[Route('/default-grid', name: 'default_grid')]
     public function defaultGrid(Request $request): Response
