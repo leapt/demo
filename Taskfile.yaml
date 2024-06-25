@@ -31,7 +31,11 @@ tasks:
     lint:
         desc: Check code style, static analysis...
         cmds:
+            - symfony console doctrine:schema:validate
             - symfony php vendor/bin/ecs
+            - symfony console lint:twig templates
+            - symfony console lint:yaml config translations
+            - symfony composer audit
 
     cs-fix:
         desc: Fix code style

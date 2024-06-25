@@ -1,0 +1,42 @@
+name: Linting
+
+on:
+  pull_request:
+    branches: ['main']
+  push:
+    branches: ['main']
+
+jobs:
+  linting:
+    name: Linting (PHP ${{ matrix.php-version }})
+    runs-on: ubuntu-22.04
+
+    strategy:
+      matrix:
+        php-version:
+          - '8.3'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          php-version: ${{ matrix.php-version }}
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v3
+
+      - name: Validate Doctrine schema
+        run: bin/console doctrine:schema:validate --skip-sync
+
+      - name: Lint Twig templates
+        run: bin/console lint:twig templates
+
+      - name: Lint YAML files
+        run: bin/console lint:yaml config translations
+
+      - name: Audit for security issues with composer packages
+        run: composer audit
