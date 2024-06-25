@@ -18,6 +18,7 @@ return ECSConfig::configure()
         __DIR__ . '/migrations',
         __DIR__ . '/public/index.php',
         __DIR__ . '/src',
+        __DIR__ . '/tests',
     ])
     ->withRootFiles()
     ->withCache('var/ecs-cache')

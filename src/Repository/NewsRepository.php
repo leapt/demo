@@ -8,6 +8,9 @@ use App\Entity\News;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
+/**
+ * @extends ServiceEntityRepository<News>
+ */
 final class NewsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
@@ -15,6 +18,9 @@ final class NewsRepository extends ServiceEntityRepository
         parent::__construct($registry, News::class);
     }
 
+    /**
+     * @return array<array-key, News>
+     */
     public function findLatest(int $count): array
     {
         return $this->createQueryBuilder('n')

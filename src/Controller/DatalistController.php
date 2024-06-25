@@ -91,7 +91,7 @@ final class DatalistController extends AbstractController
         $queryBuilder = $this->newsRepository->createQueryBuilder('n')
             ->orderBy('n.publicationDate', 'DESC');
 
-        $isTiled = str_contains($request->attributes->get('_route'), 'tiled');
+        $isTiled = str_contains($request->attributes->getString('_route'), 'tiled');
         $datalist = $this->datalistFactory
             ->createBuilder(NewsDatalistType::class, [
                 'is_tiled' => $isTiled,
@@ -100,7 +100,7 @@ final class DatalistController extends AbstractController
             ])
             ->getDatalist();
 
-        $datalist->setRoute($request->attributes->get('_route'))
+        $datalist->setRoute($request->attributes->getString('_route'))
             ->setRouteParams($request->query->all());
         $datasource = new DoctrineORMDatasource($queryBuilder);
         $datalist->setDatasource($datasource);

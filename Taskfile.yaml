@@ -33,6 +33,7 @@ tasks:
         cmds:
             - symfony console doctrine:schema:validate
             - symfony php vendor/bin/ecs
+            - task: phpstan
             - symfony console lint:twig templates
             - symfony console lint:yaml config translations
             - symfony composer audit
@@ -41,3 +42,13 @@ tasks:
         desc: Fix code style
         cmds:
             - symfony php vendor/bin/ecs --fix
+
+    phpstan:
+        desc: Run PHPStan analysis
+        cmds:
+            - symfony php vendor/bin/phpstan analyse
+
+    phpstan-baseline:
+        desc: Generate PHPStan baseline
+        cmds:
+            - symfony php vendor/bin/phpstan analyse --generate-baseline

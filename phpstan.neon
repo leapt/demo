@@ -1,0 +1,20 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    bootstrapFiles:
+        - vendor/symplify/easy-coding-standard/vendor/autoload.php
+    paths:
+        - bin/console
+        - config
+        - migrations
+        - public/index.php
+        - src
+        - tests
+        - ecs.php
+    level: 9
+    symfony:
+        container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
+    doctrine:
+        objectManagerLoader: tests/object-manager.php
+    tmpDir: var/phpstan-cache

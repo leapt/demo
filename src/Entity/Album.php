@@ -20,7 +20,10 @@ class Album
     #[Assert\NotBlank]
     private string $name;
 
-    #[ORM\OneToMany(mappedBy: 'album', targetEntity: Photo::class, cascade: ['persist', 'remove'], orphanRemoval: true)]
+    /**
+     * @var Collection<int, Photo>
+     */
+    #[ORM\OneToMany(targetEntity: Photo::class, mappedBy: 'album', cascade: ['persist', 'remove'], orphanRemoval: true)]
     #[Assert\Valid]
     private Collection $photos;
 

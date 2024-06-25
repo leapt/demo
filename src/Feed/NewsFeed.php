@@ -10,7 +10,7 @@ use Leapt\CoreBundle\Feed\FeedInterface;
 use Leapt\CoreBundle\Feed\FeedItem;
 use Symfony\Component\Routing\RouterInterface;
 
-final class NewsFeed implements FeedInterface
+final readonly class NewsFeed implements FeedInterface
 {
     public function __construct(
         private NewsRepository $newsRepository,
@@ -44,7 +44,10 @@ final class NewsFeed implements FeedInterface
         return isset($items[0]) ? $items[0]->getPublicationDate() : new \DateTime();
     }
 
-    public function getItems(): iterable
+    /**
+     * @return array<array-key, News>
+     */
+    public function getItems(): array
     {
         return $this->newsRepository->findLatest(20);
     }

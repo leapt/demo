@@ -29,6 +29,11 @@
         "twig/twig": "^3.10.3"
     },
     "require-dev": {
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^1.11",
+        "phpstan/phpstan-deprecation-rules": "^1.2",
+        "phpstan/phpstan-doctrine": "^1.4",
+        "phpstan/phpstan-symfony": "^1.4",
         "symfony/debug-bundle": "7.1.*",
         "symfony/maker-bundle": "^1.60.0",
         "symfony/monolog-bundle": "^3.10.0",
@@ -40,7 +45,8 @@
     "config": {
         "allow-plugins": {
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "phpstan/extension-installer": true
         },
         "preferred-install": {
             "*": "dist"

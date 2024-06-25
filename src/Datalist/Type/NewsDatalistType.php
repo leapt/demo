@@ -37,6 +37,9 @@ final class NewsDatalistType extends DatalistType
         ;
     }
 
+    /**
+     * @param array<array-key, mixed> $options
+     */
     public function buildDatalist(DatalistBuilder $builder, array $options): void
     {
         if ($options['is_tiled']) {

@@ -8,6 +8,9 @@ use App\Entity\Gallery;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
+/**
+ * @extends ServiceEntityRepository<Gallery>
+ */
 final class GalleryRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)

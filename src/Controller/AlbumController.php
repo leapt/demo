@@ -29,7 +29,7 @@ final class AlbumController extends AbstractController
         $datalist = $this->datalistFactory
             ->createBuilder(AlbumDatalistType::class)
             ->getDatalist();
-        $datalist->setRoute($request->attributes->get('_route'))
+        $datalist->setRoute($request->attributes->getString('_route'))
             ->setRouteParams($request->query->all());
         $datasource = new DoctrineORMDatasource($this->albumRepository->getListQueryBuilder());
         $datalist->setDatasource($datasource);

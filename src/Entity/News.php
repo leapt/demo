@@ -36,6 +36,7 @@ class News
     private string $authorEmail;
 
     #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
     #[Assert\NotBlank]
     private Category $category;
 

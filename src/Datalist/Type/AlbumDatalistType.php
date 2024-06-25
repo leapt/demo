@@ -25,6 +25,9 @@ final class AlbumDatalistType extends DatalistType
         ;
     }
 
+    /**
+     * @param array<array-key, mixed> $options
+     */
     public function buildDatalist(DatalistBuilder $builder, array $options): void
     {
         $builder
