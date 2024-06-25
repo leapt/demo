@@ -1,0 +1,16 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Match expression does not handle remaining value\\: mixed$#"
+			count: 1
+			path: src/Datalist/Type/NewsDatalistType.php
+
+		-
+			message: "#^Property App\\\\Entity\\\\Photo\\:\\:\\$album type mapping mismatch\\: property can contain App\\\\Entity\\\\Album\\|null but database expects App\\\\Entity\\\\Album\\.$#"
+			count: 1
+			path: src/Entity/Photo.php
+
+		-
+			message: "#^Property App\\\\Entity\\\\Photo\\:\\:\\$path type mapping mismatch\\: property can contain string\\|null but database expects string\\.$#"
+			count: 1
+			path: src/Entity/Photo.php
