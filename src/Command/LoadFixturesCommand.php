@@ -26,8 +26,8 @@ final class LoadFixturesCommand extends Command
 
         MediaFactory::createOne([
             'soundcloud' => '827596237',
-            'dailymotion' => 'x5d53u',
-            'youtube' => 'v5yYMjU8xDg',
+            'dailymotion' => 'x1zs5s',
+            'youtube' => 'WSh7U3m9KgA',
             'vimeo' => '17420386',
         ]);
 

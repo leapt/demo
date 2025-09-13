@@ -38,6 +38,9 @@ final class SlugController extends AbstractController
         ]);
     }
 
+    /**
+     * @return FormInterface<mixed>
+     */
     private function getForm(): FormInterface
     {
         return $this->createFormBuilder()
