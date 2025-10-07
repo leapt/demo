@@ -52,3 +52,16 @@ tasks:
         desc: Generate PHPStan baseline
         cmds:
             - symfony php vendor/bin/phpstan analyse --generate-baseline
+
+    test:
+        desc: Run tests
+        env:
+            APP_ENV: test
+        cmds:
+            - symfony php vendor/bin/phpunit
+
+    ci:
+        desc: Run lint & tests
+        cmds:
+            - task: lint
+            - task: test
