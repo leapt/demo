@@ -23,8 +23,8 @@
                         <td>{{ gallery.s3Image|default('N/A') }}</td>
                         <td>{{ gallery.s3AsyncImage|default('N/A') }}</td>
                         <td>
-                            <a href="{{ path('app_gallery_update', { 'id': gallery.id }) }}">Update</a>
-                            <a href="{{ path('app_gallery_delete', { 'id': gallery.id }) }}">Delete</a>
+                            <a href="{{ path('app_gallery_update', { id: gallery.id }) }}">Update</a>
+                            <a href="{{ path('app_gallery_delete', { id: gallery.id }) }}">Delete</a>
                         </td>
                     </tr>
                 {% endfor %}
