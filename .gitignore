@@ -14,6 +14,7 @@
 ###< leapt/core-bundle ###
 
 /.task
+/public/coverage
 /public/media
 
 ###> symfony/asset-mapper ###

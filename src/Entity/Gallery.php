@@ -19,7 +19,7 @@ class Gallery
     #[ORM\Column(type: Types::STRING)]
     #[Assert\NotBlank]
     #[Assert\Length(max: 255)]
-    private string $title;
+    private ?string $title;
 
     #[ORM\Column(type: Types::STRING, nullable: true)]
     private ?string $localImage = null;
@@ -39,12 +39,12 @@ class Gallery
     #[LeaptCore\File(path: 'uploads/s3-async-image', mappedBy: 's3AsyncImage', flysystemConfig: 's3async')]
     private ?UploadedFile $s3AsyncImageFile = null;
 
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    public function setTitle(string $title): void
+    public function setTitle(?string $title): void
     {
         $this->title = $title;
     }

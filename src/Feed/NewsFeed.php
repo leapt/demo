@@ -60,6 +60,7 @@ final readonly class NewsFeed implements FeedInterface
         $uri = $this->router->generate('app_news_view', [
             'slug' => $item->getSlug(),
         ], RouterInterface::ABSOLUTE_URL);
+        \assert(\is_string($item->getTitle()));
 
         $feedItem = new FeedItem();
         $feedItem->id = $uri;

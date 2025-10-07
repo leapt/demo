@@ -17,7 +17,7 @@ class News
 
     #[ORM\Column(type: Types::STRING)]
     #[Assert\NotBlank]
-    private string $title;
+    private ?string $title;
 
     #[ORM\Column(type: Types::STRING, unique: true)]
     private string $slug;
@@ -50,12 +50,12 @@ class News
     #[ORM\Column(type: Types::STRING, nullable: true)]
     private ?string $image = null;
 
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    public function setTitle(string $title): void
+    public function setTitle(?string $title): void
     {
         $this->title = $title;
     }
