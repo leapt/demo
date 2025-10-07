@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use PhpCsFixer\Fixer\ControlStructure\NoUselessElseFixer;
+use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
 use PhpCsFixer\Fixer\LanguageConstruct\DirConstantFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitConstructFixer;
 use PhpCsFixer\Fixer\ReturnNotation\NoUselessReturnFixer;
@@ -30,5 +31,6 @@ return ECSConfig::configure()
         StrictComparisonFixer::class,
         StrictParamFixer::class,
         DeclareStrictTypesFixer::class,
+        NoUnusedImportsFixer::class,
     ])
     ->withPhpCsFixerSets(perCS20: true, symfonyRisky: true);

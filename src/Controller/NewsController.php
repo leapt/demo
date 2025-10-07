@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\Entity\News;
 use App\Form\Type\NewsType;
 use App\Repository\NewsRepository;
+use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,7 +19,7 @@ final class NewsController extends AbstractController
     public function __construct(private readonly NewsRepository $newsRepository) {}
 
     #[Route('/{slug}', name: 'view')]
-    public function view(News $news): Response
+    public function view(#[MapEntity(mapping: ['slug' => 'slug'])] News $news): Response
     {
         return $this->render('news/view.html.twig', [
             'news' => $news,
