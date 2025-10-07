@@ -34,7 +34,7 @@
     <hr>
 
     Style:
-    {% set links = { 'Default': 'index', 'Bootstrap 3': 'bootstrap_3', 'Bootstrap 4': 'bootstrap_4', 'Bootstrap 5': 'bootstrap_5' } %}
+    {% set links = { Default: 'index', 'Bootstrap 3': 'bootstrap_3', 'Bootstrap 4': 'bootstrap_4', 'Bootstrap 5': 'bootstrap_5' } %}
     {% for label, link in links %}
         {% if is_active_path(path("app_form_type_#{link}")) %}<strong>{% endif %}
         <a href="{{ path("app_form_type_#{link}") }}">{{ label }}</a>

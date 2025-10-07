@@ -1,8 +1,8 @@
 {% block _album_photos_row %}
     <fieldset class="mb-4">
-        <legend>{{ form.vars.label|trans({}, translation_domain) }}</legend>
+        <legend>{{ form.vars.label|trans(domain: translation_domain) }}</legend>
 
-        {{ form_widget(form, { 'attr': { 'class': 'row' } }) }}
+        {{ form_widget(form, { attr: { class: 'row' } }) }}
         {{ form_errors(form) }}
     </fieldset>
 {% endblock _album_photos_row %}
@@ -21,7 +21,7 @@
             {% if allow_add %}
                 <div class="btn-group mt-3">
                     <button type="button" class="btn btn-secondary" data-photos="add">
-                        {{ add_label|trans({}, translation_domain) }}
+                        {{ add_label|trans(domain: translation_domain) }}
                     </button>
                 </div>
             {% endif %}

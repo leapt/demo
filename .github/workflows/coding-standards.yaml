@@ -31,3 +31,6 @@ jobs:
 
       - name: Run ECS
         run: vendor/bin/ecs
+
+      - name: Run Twig CS Fixer
+        run: vendor/bin/twig-cs-fixer lint
