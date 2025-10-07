@@ -18,4 +18,5 @@ return [
     Symfony\UX\StimulusBundle\StimulusBundle::class => ['all' => true],
     Leapt\SlugTypeBundle\LeaptSlugTypeBundle::class => ['all' => true],
     Leapt\FroalaEditorBundle\LeaptFroalaEditorBundle::class => ['all' => true],
+    Kocal\BiomeJsBundle\KocalBiomeJsBundle::class => ['dev' => true],
 ];
