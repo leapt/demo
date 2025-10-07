@@ -34,6 +34,8 @@ tasks:
             - symfony console doctrine:schema:validate
             - symfony php vendor/bin/ecs
             - symfony php vendor/bin/twig-cs-fixer lint
+            - symfony console biomejs:download --quiet
+            - bin/biome check
             - task: phpstan
             - symfony console lint:twig templates
             - symfony console lint:yaml config translations
@@ -44,6 +46,7 @@ tasks:
         cmds:
             - symfony php vendor/bin/ecs --fix
             - symfony php vendor/bin/twig-cs-fixer lint --fix
+            - bin/biome check --write --unsafe
 
     phpstan:
         desc: Run PHPStan analysis

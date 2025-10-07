@@ -83,6 +83,19 @@
     "guzzlehttp/psr7": {
         "version": "2.2.1"
     },
+    "kocal/biome-js-bundle": {
+        "version": "2.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "596a64433caa3a674576e5924ba9b607e1e14e81"
+        },
+        "files": [
+            "config/packages/kocal_biome_js.yaml",
+            "biome.json"
+        ]
+    },
     "league/flysystem": {
         "version": "3.0.12"
     },

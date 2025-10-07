@@ -1,0 +1,22 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+    "files": {
+        "includes": [
+            "**",
+            "!assets/vendor/*",
+            "!assets/bootstrap.js",
+            "!assets/controllers.json",
+            "!assets/controllers/csrf_protection_controller.js",
+            "!assets/controllers/hello_controller.js",
+            "!public/*",
+            "!var/*",
+            "!vendor/*",
+            "!composer.json",
+            "!package.json"
+        ]
+    },
+    "formatter": {
+        "indentStyle": "space",
+        "indentWidth": 4
+    }
+}

@@ -29,6 +29,7 @@
         "twig/twig": "^3.21.1"
     },
     "require-dev": {
+        "kocal/biome-js-bundle": "^2.1",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan": "^2.1.30",
         "phpstan/phpstan-deprecation-rules": "^2.0.3",
