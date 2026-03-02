@@ -7,13 +7,12 @@ namespace App\Factory;
 use App\Entity\Category;
 use App\Entity\Enums\Status;
 use App\Entity\News;
-use Zenstruck\Foundry\Persistence\PersistentProxyObjectFactory;
-use Zenstruck\Foundry\Persistence\Proxy;
+use Zenstruck\Foundry\Persistence\PersistentObjectFactory;
 
 /**
- * @extends PersistentProxyObjectFactory<News>
+ * @extends PersistentObjectFactory<News>
  */
-final class NewsFactory extends PersistentProxyObjectFactory
+final class NewsFactory extends PersistentObjectFactory
 {
     public static function class(): string
     {
@@ -28,7 +27,7 @@ final class NewsFactory extends PersistentProxyObjectFactory
      *     publicationDate: \DateTime,
      *     authorName: string,
      *     authorEmail: string,
-     *     category: Category&Proxy<Category>,
+     *     category: Category,
      *     image: string|null,
      *     status: Status,
      *     active: bool,

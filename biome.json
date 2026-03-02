@@ -1,14 +1,15 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+    "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
     "files": {
         "includes": [
             "**",
             "!assets/vendor/*",
-            "!assets/bootstrap.js",
             "!assets/controllers.json",
             "!assets/controllers/csrf_protection_controller.js",
             "!assets/controllers/hello_controller.js",
+            "!assets/stimulus_bootstrap.js",
             "!public/*",
+            "!tests/*",
             "!var/*",
             "!vendor/*",
             "!composer.json",
