@@ -1,16 +1,19 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Match expression does not handle remaining value\\: mixed$#"
+			message: '#^Match expression does not handle remaining value\: mixed$#'
+			identifier: match.unhandled
 			count: 1
 			path: src/Datalist/Type/NewsDatalistType.php
 
 		-
-			message: "#^Property App\\\\Entity\\\\Photo\\:\\:\\$album type mapping mismatch\\: property can contain App\\\\Entity\\\\Album\\|null but database expects App\\\\Entity\\\\Album\\.$#"
+			message: '#^Property App\\Entity\\Photo\:\:\$album type mapping mismatch\: property can contain App\\Entity\\Album\|null but database expects App\\Entity\\Album\.$#'
+			identifier: doctrine.associationType
 			count: 1
 			path: src/Entity/Photo.php
 
 		-
-			message: "#^Property App\\\\Entity\\\\Photo\\:\\:\\$path type mapping mismatch\\: property can contain string\\|null but database expects string\\.$#"
+			message: '#^Method App\\Kernel\:\:getAllowedEnvs\(\) is unused\.$#'
+			identifier: method.unused
 			count: 1
-			path: src/Entity/Photo.php
+			path: src/Kernel.php
