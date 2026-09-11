@@ -2,17 +2,14 @@
 flysystem:
     storages:
         local:
-            adapter: 'local'
-            options:
+            local:
                 directory: '%kernel.project_dir%/public'
         s3:
-            adapter: 'aws'
             # visibility: public # Make the uploaded file publicly accessible in S3
-            options:
+            aws:
                 client: 'aws_client_service'
                 bucket: '%env(AWS_BUCKET)%'
         s3async:
-            adapter: 'asyncaws'
-            options:
+            asyncaws:
                 client: 'aws_sync_client_service'
                 bucket: '%env(AWS_BUCKET)%'
